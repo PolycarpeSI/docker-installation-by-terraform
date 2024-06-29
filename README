@@ -1,0 +1,12 @@
+This terraform code is about the installation of Docker in an EC2 instance on AWS
+
+Just run the following commands:
+1- terraform init
+2- terraform validate
+3- terraform plan
+4- terraform apply --auto-approve
+
+Make sure terraform is installed on your environment ...
+
+### Author: Polycarpe Siekambe
+###         psiekambe@gmail.com
