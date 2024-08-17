@@ -11,7 +11,7 @@ data "aws_ami" "amazon-2" {
 
 resource "aws_instance" "Docker-Server" {
   ami           = data.aws_ami.amazon-2.id
-  instance_type = "t2.micro"
+  instance_type = var.instance-type
   //security_groups = ["web"]
   security_groups = [aws_security_group.sg.name]
   key_name        = aws_key_pair.ec2_key.key_name

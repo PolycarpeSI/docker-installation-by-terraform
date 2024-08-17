@@ -5,11 +5,11 @@ resource "tls_private_key" "ec2_key" {
 }
 # Create the Key Pair
 resource "aws_key_pair" "ec2_key" {
-  key_name   = "devopsec3" //var.keypair-name
+  key_name   = var.key-name
   public_key = tls_private_key.ec2_key.public_key_openssh
 }
 # Save file
 resource "local_file" "ssh_key" {
-  filename = "devopsec3.pem" //${var.keypair-name}.pem
+  filename = var.key-name //${var.keypair-name}.pem
   content  = tls_private_key.ec2_key.private_key_pem
 }

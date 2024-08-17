@@ -8,5 +8,5 @@ output "az" {
 
 output "ssh-connection" {
   //value = "ssh -i ~/Downloads/devops-ec2.pem ec2-user@${aws_instance.Server1.public_ip}"
-  value = "ssh -i devopsec3.pem ec2-user@${aws_instance.Docker-Server.public_ip}"
+  value = "ssh -i ${var.key-name} ec2-user@${aws_instance.Docker-Server.public_ip}"
 }
