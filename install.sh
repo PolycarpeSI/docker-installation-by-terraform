@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# docker install
+# docker install ---
 sudo yum update -y
 sudo yum install vim -y
 sudo yum install docker -y
